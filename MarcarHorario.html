@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Horario</title>
+</head>
+<body>
+    <div class="fundo"></div>
+    <div class="menuNAV">
+        <nav>
+            <ul>
+                <li id="imgMENU">
+                    <figure>
+                        <img id="imglogomenu" src="Img/menu/RefugioDaTiz.png" alt="">
+                    </figure>
+                </li>
+                <div class="VisibilidadeMenuGrande">
+                    <ul class="MenuGrande">
+                        <li class="MenuGrandeHome MenuGrandeli"><a href="">Home</a></li>
+                        <li class="MenuGrandeServiços MenuGrandeli"><a id="Serviços">Serviços</a></li>
+                        <li class="MenuGrandeContato MenuGrandeli"><a id="Contato">Contato</a></li>
+                    </ul>
+                </div>
+                <li class="openMENU">
+                    <div class="menuHamburguer">
+                        <button class="menu-button" id="menuHamburguerbarras">
+                            <span id="barra1"></span>
+                            <span id="barra2"></span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+                <div class="showMENU" id="showMENUid">
+                    <ul class="showMENUul">
+                        <li class="showMENUHome showMENUli"><a href="">Home</a></li>
+                        <li class="showMENUServiços showMENUli"><a id="Serviços1">Serviços</a></li>
+                        <li class="showMENUContato showMENUli"><a id="Contato1">Contato</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </div>
+    <div class="centralizardiv">
+    <div class="MarcarHorarioForm">
+        <h2 id="TituloFORM">Marcar Horario</h2>
+        <ul class="ConteudoForm">
+            <form action="enviar.php" method="post">
+            <ul class="ConteudoFormIdentificacao">
+                <li>
+                    <label for="name">Nome:</label>
+                    <input id="inputIndentificacao" type="text" id="name" name="Nome" required><br><br>
+                <li>
+                    <label for="email">Email:</label>
+                    <input id="inputIndentificacao" type="email" id="email" name="Email" required><br><br>
+            </li>
+                </ul>
+                <div class="linha"></div>
+            <ul class="ConteudoFormAgendamento">
+                <li>
+                    <label for="date">Data:</label><br>
+                    <input type="date" id="Data" name="Data" required>
+                </li>
+                <li>
+                    <label for="Horario">Horario:</label><br>
+                    <select name="Horario" required>
+                        <option value="9:00">9:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="13:00">13:00</option>
+                        <option value="14:00">14:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                      </select>
+                </li>
+            </ul>
+        </ul>
+        <div id="botaodiv">
+            <input id="botaoenviar" type="submit" value="Enviar">
+        </div>
+        </form>
+    </div></div>
+</body>
+</html>
+<style>
+    @font-face {
+        font-family: 'FonteSite';
+        src: url('font/Outfit-VariableFont_wght.ttf') format('truetype');}
+
+    :root {
+        --fundo-cor: rgb(231, 233, 240);
+        --font-cor: #e4dcdc;
+        --palavra-cor: #7c204e;
+        --gradiente-cor: #dbaccb56;
+        --footer-cor: #f3deeb;
+        --bordas-cor: #ffbcdd;
+        --brilho-cor: #b8606b;
+        --form-background-cor: #b16e779a;
+        --fundo-gradiente-cor-cima: #caa2bd8e;
+        --fundo-gradiente-cor-baixo: #755669b4;
+        --form-detalhes-cor: #75566960;
+    }
+    *{
+        font-family: 'FonteSite';
+        box-sizing: border-box;
+        color: var(--font-cor);
+    }
+    body{
+        overflow-x: hidden;
+        background-color: var(--fundo-cor);
+        padding: 0;
+        margin: 0;
+        background-image: linear-gradient(var(--fundo-gradiente-cor-cima), var(--fundo-gradiente-cor-baixo)), url(Img/fundo/fundo01.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    .EspaçoEmBranco{
+        padding-bottom: 110px;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    a{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+    button{
+        border: none;
+        background: none;
+        text-decoration: none;
+    }
+    .menuNAV *{
+        padding: 0;
+        margin: 0;
+    }
+    .menuNAV nav{
+        z-index: 1;
+        position: fixed;
+        width: 100%;
+        background: linear-gradient(0deg, #00000000, var(--gradiente-cor));
+        backdrop-filter: blur(4px);
+    }
+    ul{
+        list-style: none;
+    }
+    .menuNAV ul{
+        margin: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 5%;
+        padding-right: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+    #imgMENU figure{
+        padding: 0;
+        margin: 0;
+    }
+    #imglogomenu{
+        cursor: pointer;
+        display: flex;
+        width: 120px;
+        margin: 5px;
+        transition: filter .15s ease-out;
+    }
+    #imglogomenu:hover{
+        filter: drop-shadow( 0px 0px 15px var(--bordas-cor));
+        transition: filter .05s ease-out;
+    }
+    #openMENU{
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+    }
+    .menuHamburguer *{
+        transition: filter .15s ease-out;
+    }
+    .menuHamburguer:hover *{
+        filter: drop-shadow( 0px 0px 5px var(--bordas-cor) );
+        transition: filter .05s ease-out;
+    }
+    .menuHamburguer.menuaberto *{
+        filter: drop-shadow( 0px 0px 5px var(--bordas-cor) );
+        transition: filter .05s ease-out;
+    }
+    .menuHamburguer{
+        background-color: none;
+        padding: 5px;
+        display: flex;
+        border-radius: 100%;
+        align-self: center;
+        flex-direction: column;
+    }
+    .menu-button {
+        width: 40px;
+        height: 30px;
+        position: relative;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+    #barra1{
+        background-color: var(--font-cor);
+        border-radius: 10px;
+        width: 100%;
+        height: 5px;
+        top: 35px;
+        right: 36px;
+    }
+    #barra2{
+        background-color: var(--font-cor);
+        border-radius: 10px;
+        width: 100%;
+        height: 5px;
+        top: 55px;
+        right: 36px;
+    }
+    .MenuGrande *{
+        display: flex;
+        min-width: fit-content;
+    }
+    .MenuGrande .MenuGrandeli{
+        display: flex;
+        margin: 0px 20px;
+        cursor: pointer;
+        color: var(--font-cor);
+    }
+    .MenuGrande .MenuGrandeli:hover{
+        transition: color 1s linear, border-botton 1s linear;
+        color: #4576b6;
+    }
+    .MenuGrandeHome{
+        transition: filter .4s ease-in;
+        filter: drop-shadow(0px 0px 2px var(--bordas-cor));
+    }
+    .MenuGrandeHome:hover{
+        transition: filter .2s ease-in;
+        filter: drop-shadow(0px 0px 5px var(--bordas-cor));
+    }
+
+    .MenuGrandeServiços{
+        transition: filter .4s ease-in;
+        filter: drop-shadow(0px 0px 2px var(--bordas-cor));
+    }
+    .MenuGrandeServiços:hover{
+        transition: filter .2s ease-in;
+        filter: drop-shadow(0px 0px 5px var(--bordas-cor));
+    }
+
+    .MenuGrandeContato{
+        transition: filter .4s ease-in;
+        filter: drop-shadow(0px 0px 2px var(--bordas-cor));
+    }
+    .MenuGrandeContato:hover{
+        transition: filter .2s ease-in;
+        filter: drop-shadow(0px 0px 5px var(--bordas-cor));
+    }
+    @media (max-width: 800px) {
+        .MenuGrande *{
+            display: none;
+      }
+    
+    }
+    @media (min-width: 800px) {
+        .openMENU{
+            display: none;
+      }
+        .showMENU {
+            display: none;
+        }
+    
+    }
+    .showMENU{
+        display: none;
+        justify-content: center;
+        min-width: fit-content;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-top: var(--font-cor)3px solid;
+        border-bottom: var(--font-cor)3px solid;
+        backdrop-filter: blur(10px);
+    }
+    .showMENU.show{
+        display: block;
+    }
+    .showMENUul{
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .showMENUHome{
+        transition: filter .4s ease-in;
+        filter: drop-shadow(0px 0px 2px var(--brilho-cor));
+    }
+    .showMENUHome:hover{
+        transition: filter .2s ease-in;
+        filter: drop-shadow(0px 0px 5px var(--brilho-cor));
+    }
+
+    .showMENUServiços{
+        transition: filter .4s ease-in;
+        filter: drop-shadow(0px 0px 2px var(--brilho-cor));
+    }
+    .showMENUServiços:hover{
+        transition: filter .2s ease-in;
+        filter: drop-shadow(0px 0px 5px var(--brilho-cor));
+    }
+    .showMENUContato{
+        transition: filter .4s ease-in;
+        filter: drop-shadow(0px 0px 2px var(--brilho-cor));
+    }
+    .showMENUContato:hover{
+        transition: filter .2s ease-in;
+        filter: drop-shadow(0px 0px 5px var(--brilho-cor));
+    }
+    .centralizardiv{
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .MarcarHorarioForm{
+        box-shadow: 0 0 15px var(--form-detalhes-cor);
+        border-radius: 30px;
+        padding: 40px;
+        background-color: var(--form-background-cor);
+    }
+    #TituloFORM{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
+    .ConteudoForm{
+        gap: 40px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .ConteudoFormIdentificacao{
+        width: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .ConteudoFormIdentificacao li{
+        gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .ConteudoFormIdentificacao input{
+        background-color: var(--form-detalhes-cor);
+        border: none;
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .linha{
+        margin: 30px 0;
+        display: flex;
+        align-self: center;
+        width: 280px;
+        height: 5px;
+        border-radius: 20px;
+        background-color: var(--form-detalhes-cor);
+    }
+    .ConteudoFormAgendamento{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .ConteudoFormAgendamento li{
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .ConteudoFormAgendamento *{
+        border: none;
+    }
+    .ConteudoFormAgendamento input, .ConteudoFormAgendamento select{
+        text-align: center;
+        background: var(--form-detalhes-cor);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    #botaoenviar{
+        background-color: var(--form-detalhes-cor);
+        border: var(--form-detalhes-cor) 1px solid;
+        border-radius: 15px;
+        padding: 5px;
+        width: 100%;
+    }
+    #botaodiv{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    #botaoenviar:hover{
+        transition: background-color .8s linear, color .4s linear,filter 1.2s ease-out;
+        background-color: var(--form-background-cor);
+        color: var(--fundo-gradiente-cor-cima);
+        filter: drop-shadow(0px 0px 50px var(--fundo-gradiente-cor-baixo));
+    }
+    option{
+        background: var(--fundo-gradiente-cor-baixo);
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+</style>
+<script>
+    document.getElementById('Serviços').addEventListener('click', function() {
+        var destino = document.getElementById('pt3serviços');
+        var rect = destino.getBoundingClientRect();
+        var offset = rect.top + window.scrollY - (window.innerHeight / 2 ) + (destino.offsetHeight / 2);
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+    });
+    document.getElementById('Contato').addEventListener('click', function() {
+        var destino = document.getElementById('pt4');
+        var rect = destino.getBoundingClientRect();
+        var offset = rect.top + window.scrollY - (window.innerHeight / 2 ) + (destino.offsetHeight / 2);
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+    });
+    document.getElementById('Serviços1').addEventListener('click', function() {
+        var destino = document.getElementById('pt3serviços');
+        var rect = destino.getBoundingClientRect();
+        var offset = rect.top + window.scrollY - (window.innerHeight / 2 ) + (destino.offsetHeight / 2);
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+    });
+    document.getElementById('Contato1').addEventListener('click', function() {
+        var destino = document.getElementById('pt4');
+        var rect = destino.getBoundingClientRect();
+        var offset = rect.top + window.scrollY - (window.innerHeight / 2 ) + (destino.offsetHeight / 2);
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+    });
+    document.getElementById('menuHamburguerbarras').addEventListener('click', () => {
+        document.getElementById('menuHamburguerbarras').classList.toggle('active');
+        document.getElementById('showMENUid').classList.toggle('show');
+    });
+    document.getElementById('dateForm')
+</script>

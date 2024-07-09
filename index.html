@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SITE TMEB</title>
 </head>
 <body>
-    <div class="fundo"></div>
     <div class="menuNAV">
         <nav>
             <ul>
@@ -49,8 +48,8 @@
         <ul>
             <li id="textopt1">
                 <span id="t1pt1">
-                    <h1 id="textopt1h1">TEXTO DE <span id="mensagemcolorida">TESTE</span> MUDAR DEPOIS III II</h1>
-                    <p id="textopt1p">Subtitulo <span id="mensagemcolorida">Subtitulo</span> Subtitulo <span id="mensagemcolorida">Subtitulo</span>Subtitulo <span id="mensagemcolorida">Subtitulo</span>Subtitulo <span id="mensagemcolorida">Subtitulo</span>Subtitulo</p>
+                    <h1 id="textopt1h1">REFUGIO <span id="mensagemcolorida">TERAPEUTICO</span> DA TIZ</h1>
+                    <p id="textopt1p"><span id="mensagemcolorida">PAZ e HARMONIA</span></p>
                     <button id="sobremimbutton">Sobre nós</button>
                 </span>
                 
@@ -67,16 +66,17 @@
     <!-- SOBRE MIM -->
     <div class="pt2">
         <div class="escritapt2">
-            <p id="pt2sobremim"><span id="mensagemcolorida" >Sobre mim</span></p>
+            <p id="pt2sobremim"><span id="mensagemcolorida" >Sobre nós</span></p>
             <h2 id="pt2comocomecei">Como começamos</h2>
             <span id="pt2historia">
                 <p >Este negócio surge com o intuito de fornecer uma ampla variedade de serviços, começando com produtos biológicos e promovendo tratamentos e serviços com plantas medicinais. Além disso, serão oferecidos tratamentos com terapias alternativas, tratamentos corporais, massagens estéticas e epilações. Também está planeado o desenvolvimento de uma gama de produtos biológicos para serviços estéticos. A ideia base do negócio tem origem num gosto pessoal na área equestre, combinado com o interesse por diversas terapias e a procura por um bem estar total.</p>
             </span>
-            
+            <br>
             <button>Saiba mais</button>
     </div>
     </div>
     
+    <div class="EspaçoEmBranco"></div>
     <div class="EspaçoEmBranco"></div>
     <div class="EspaçoEmBranco"></div>
 
@@ -84,11 +84,11 @@
     <div class="pt3">
         <p id="pt3serviços"><span id="mensagemcolorida">Serviços</span></p>
 
-        <h2>Unhas</h2>
+        <h2>Estética</h2>
         <div class="pt3content content1">
             <ul>
                 <li>
-                    <p id="pt3Massagemtexto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus omnis odio, aut recusandae ducimus quaerat</p>
+                    <p id="pt3Massagemtexto">A estética é o ramo da filosofia dedicado ao estudo da beleza, da arte e da percepção sensorial. Investiga questões como o que é o belo, como as pessoas respondem emocionalmente e intelectualmente a obras de arte e a fenómenos estéticos, e quais os critérios que são usados para avaliar a arte e a beleza. Além disso, a estética explora conceitos como o sublime, o gosto, a feiura e o kitsch, proporcionando uma compreensão mais profunda das experiências estéticas e dos juízos de valor associados a elas.</p>
                 </li>
                 <li>
                     <img src="Img/pt3/maquiagem.jpg" alt="">
@@ -98,11 +98,12 @@
         
         <div class="EspaçoEmBranco"></div>
 
-        <h2>Massagem</h2>
+        <h2>Massagem Relaxante</h2>
         <div class="pt3content content2">
             <ul>
                 <li>
-                    <p id="pt3Massagemtexto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus omnis odio, aut recusandae ducimus quaerat</p>
+                    <p id="pt3Massagemtexto"> 
+                        Promovem o relaxamento, reduzem o stress e a ansiedade e melhoram a qualidade do sono, ao atuarem ao nível das hormonas</p>
                 </li>
                 <li>
                     <img src="Img/pt3/massagem1.jpg" alt="">
@@ -116,7 +117,7 @@
         <div class="pt3content content3">
             <ul>
                 <li>
-                    <p id="pt3Massagemtexto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus omnis odio, aut recusandae ducimus quaerat</p>
+                    <p id="pt3Massagemtexto">Tem como função  controlar a oleosidade, diminuir a aparência dos poros, clarear manchas e deixar o rosto mais luminoso.</p>
                 </li>
                 <li>
                     <img src="Img/pt3/skincare.jpg" alt="">
@@ -152,13 +153,15 @@
 
                 <ul>
                     <figure>
-                    <img id="relogioIMG" src="Img/pt4/clock.png" alt="">
-                    <figcaption>
-                        <h3>Horario</h3>
-                    </figcaption>
-                </figure>
-                    <li>Seg - Sex: 09:00 - 21:00</li>
-                    <li>Sab - Dom: 12:00 - 21:00</li>
+                        <img id="relogioIMG" src="Img/pt4/clock.png" alt="">
+                        <figcaption>
+                            <h3>Horario</h3>
+                        </figcaption>
+                    </figure>
+                    <li>Seg - Sex: 09:00 - 19:00</li>
+                    <li>Sab: 09:00 - 15:00</li></li>
+                    <li>Dom: FECHADO</li>
+                    <a href="MarcarHorario.html"><button id="ButtonMarcarHorario">Marcar Horario</button></a>
                 </ul>
 
                 <ul>
@@ -169,27 +172,22 @@
                         </figcaption>
                     </figure>
                     <li>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12394.851956061344!2d-8.998496170681065!3d39.04466291425622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18d9fb916c0139%3A0xfc81c64823508734!2sEscola%20T%C3%A9cnica%20e%20Profissional%20do%20Ribatejo%20-%20Alenquer!5e0!3m2!1spt-PT!2spt!4v1720119932612!5m2!1spt-PT!2spt"
-                            width="100%"
-                            height="180px"
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            >
-                        </iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19116.890996306603!2d-9.009690317222859!3d39.03942489465278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd18d9f75306e885%3A0x6063f0fa0db06a1e!2sParque%20Urbano%20Da%20Romeira!5e0!3m2!1spt-BR!2spt!4v1720550336896!5m2!1spt-BR!2spt" 
+                        width="300" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </li>
                 </ul>
             </div>
         </div>
 
         <div class="EspaçoEmBranco"></div>
-        <div class="EspaçoEmBranco"></div>
-        <div class="EspaçoEmBranco"></div>
-
 
     <footer>
-        <h1 id="TextoH1Footer">TEXTO DE TESTE MUDAR DEPOIS</h1>
+        <h1 id="TextoH1Footer">REFUGIO TERAPEUTICO DA TIZ</h1>
         <div class="footerDIV">
             <ul class="FooterUL vertical"><h2>Paginas</h2>
                 <li><a href="">Home</a></li>
@@ -198,9 +196,8 @@
                 <li><a href="">Serviços</a></li>
             </ul>
             <ul class="FooterUL vertical"><h2>Redes sociais</h2>
-                <li><a href=""><img id="imgFooter" src="Img/Footer/instagram.png" alt=""></a></li>
-                <li><a href=""><img id="imgFooter" src="Img/Footer/facebook.png" alt=""></a></li>
-                <li><a href=""><img id="imgFooter" src="Img/Footer/linkedin.png" alt=""></a></li>
+                <li><a href="https://www.instagram.com/refugioterapeuticodatiz/"><img id="imgFooter" src="Img/Footer/instagram.png" alt=""></a></li>
+                <li><a href="https://www.facebook.com/refugio.terapeutico.da.tiz?mibextid=LQQJ4d&rdid=dEqW3tIVYTqxltEI&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2FAXa6xfsvsNZFCJWN%2F%3Fmibextid%3DLQQJ4d"><img id="imgFooter" src="Img/Footer/facebook.png" alt=""></a></li>
             </ul>
             <ul class="FooterUL vertical"><h2>Icones</h2>
                 <li><a href="https://www.flaticon.com/">SITE</a></li>
@@ -210,6 +207,9 @@
                     |
                     <li><a href="https://www.flaticon.com/authors/google">Google</a></li>
                 </ul>
+            </ul>
+            <ul class="FooterUL horizontal FooterULEmail"><h2>EMAIL</h2>
+                <li id="FooterliEmail"><input type="text"><p>para Refugioterapeuticodatiz@gmail.com</p></li>
             </ul>
         </div>
     </footer>
@@ -235,21 +235,20 @@
         --horario-cor: #254dff;
         --localização-cor: #ff0000;
         --brilho-cor: #b8606b;
-        --fundo-gradiente-cor-cima: #caa2bd6b;
-        --fundo-gradiente-cor-baixo: #7556696b;
+        --fundo-gradiente-cor-cima: #caa2bd8e;
+        --fundo-gradiente-cor-baixo: #755669b4;
     }
     *{
         font-family: 'FonteSite';
         box-sizing: border-box;
         color: var(--font-cor);
-        
     }
     body{
         overflow-x: hidden;
         background-color: var(--fundo-cor);
         padding: 0;
         margin: 0;
-        background-image: linear-gradient(var(--fundo-gradiente-cor-cima), var(--fundo-gradiente-cor-baixo)), url(Img/fundo/fundo9.jpg);
+        background-image: linear-gradient(var(--fundo-gradiente-cor-cima), var(--fundo-gradiente-cor-baixo)), url(Img/fundo/fundo01.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -500,13 +499,22 @@
       from { scale: 0; }
       to { width: 400px; }
     }
-
     .pt1 #textopt1h1{
-
-        max-width: 35vh;
+        font-size: 210%;
+        line-height: 50px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
+        max-width: fit-content;
         font-weight: 500;
+        line-height: 50px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
     }
     .pt1 #textopt1p{
+        font-size: 110%;
+        line-height: 50px;
+        word-spacing: 2px;
+        letter-spacing: 1px;
         max-width: 50vh;
         font-weight: 400;
     }
@@ -550,15 +558,23 @@
         align-items: center;
     }
     .pt2 #pt2sobremim{
+        word-spacing: 5px;
+        font-size: 120%;
         font-weight: 500;
         margin-top: 200px;
         margin-bottom: 0;
     }
     .pt2 #pt2comocomecei{
+        word-spacing: 5px;
+        font-size: 160%;
         font-weight: 500;
         margin-bottom: 0;
     }
     .pt2 #pt2historia{
+        font-size: 120%;
+        line-height: 50px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
         animation: apareceu .4s ease;
         text-align-last: center;
         text-align: justify;
@@ -609,7 +625,7 @@
     }
     .pt3content ul{
         box-shadow: 0 0px 5px var(--fundo-gradiente-cor-baixo);
-        width: fit-content;
+        max-width: 65vw;
         
         margin: 10px;
         padding: 10px;
@@ -642,6 +658,8 @@
     }
 
     .pt3content ul p{
+        margin: 20px;
+        font-size: large;
         font-weight: 350;
     }
     .pt3content ul img{
@@ -659,7 +677,16 @@
     /*PT4*/
 
     .pt4 p{
+        font-size: 110%;
+        word-spacing: 5px;
+        letter-spacing: 1px;
         text-align: center;
+    }
+    .pt4 ul li{
+        font-size: 110%;
+        line-height: 25px;
+        word-spacing: 5px;
+        letter-spacing: 1px;
     }
     .pt4Infos ul{
         padding: 0;
@@ -721,6 +748,27 @@
         filter: grayscale(0);
         scale: 1.05;
     }
+    .pt4 #ButtonMarcarHorario{
+        margin-top: 20px;
+        animation: apareceu .4s ease, apareceucor .5s ease;
+        cursor: pointer;
+        max-width: fit-content;
+        padding-top: 0;
+        padding: 8px;
+        padding-left: 10px;
+        padding-right: 10px;
+        box-sizing: border-box;
+        border: var(--palavra-cor) 1px solid;
+        color: var(--palavra-cor);
+        transition: background-color .4s linear, color .3s linear, border .3s linear, filter 0.6s ease-out;
+    }
+    .pt4 #ButtonMarcarHorario:hover{
+        transition: background-color .8s linear, color .4s linear, border .6s linear,filter 1.2s ease-out;
+        background-color: var(--palavra-cor);
+        border: var(--footer-cor) 1px solid;
+        color: var(--footer-cor);
+        filter: drop-shadow(0px 0px 50px var(--brilho-cor));
+    }
 
     /*FOOTER*/
 
@@ -750,6 +798,7 @@
         display: flex;
         align-items: center;
         gap: 10px;
+        row-gap: 300px;
     }
     .FooterUL{
         padding: 0;
@@ -769,6 +818,12 @@
     #imgFooter{
         margin: 5px;
         width: 25px;
+    }
+    .FooterULEmail{
+        width: 100%;
+    }
+    #FooterliEmail{
+        width: 100%;
     }
 </style>
 <script>
