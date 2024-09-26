@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+
+    <select id="TiposServiçosABA">
+        <option value="massagem">Massagem</option>
+        <option value="estetica">Estética</option>
+        <option value="limpeza">Limpeza de Pele</option>
+    </select>
+
+    <p id="ValorServico">Valor: </p>
+
+
+</body>
+<script>
+    // Certifique-se de que o script é executado após o DOM estar completamente carregado
+document.addEventListener('DOMContentLoaded', function () {
+
+// Acessa o elemento select pelo ID
+const TiposServiçosABA = document.getElementById('TiposServiçosABA');
+
+// Adiciona o evento de mudança ao select
+TiposServiçosABA.addEventListener('change', function () {
+    // Acessa o elemento onde o texto será modificado
+    const VALOR = document.getElementById("ValorServico");
+
+    // Altera o texto do elemento
+    VALOR.innerText = `TESTE`;
+});
+});
+
+</script>
+</html>
