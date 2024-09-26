@@ -6,6 +6,10 @@
     <title>Marcar Horario</title>
 </head>
 <body>
+<<<<<<< HEAD
+=======
+    <div class="fundo"></div>
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
     <div class="menuNAV">
         <nav>
             <ul>
@@ -16,7 +20,11 @@
                 </li>
                 <div class="VisibilidadeMenuGrande">
                     <ul class="MenuGrande">
+<<<<<<< HEAD
                         <li class="MenuGrandeHome MenuGrandeli"><a href="index.html">Home</a></li>
+=======
+                        <li class="MenuGrandeHome MenuGrandeli"><a href="">Home</a></li>
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
                         <li class="MenuGrandeServiços MenuGrandeli"><a id="Serviços">Serviços</a></li>
                         <li class="MenuGrandeContato MenuGrandeli"><a id="Contato">Contato</a></li>
                     </ul>
@@ -39,15 +47,25 @@
                 </div>
         </nav>
     </div>
+<<<<<<< HEAD
     <div id="EspaçoEmBrancoIF"></div>
+=======
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
     <div class="centralizardiv">
     <div class="MarcarHorarioForm">
         <h2 id="TituloFORM">Marcar Horario</h2>
         <ul class="ConteudoForm">
+<<<<<<< HEAD
             <form action="index.php" method="POST" netlify>
             <ul class="ConteudoFormIdentificacao">
                 <li>
                     <label for="nome">Nome:</label>
+=======
+            <form action="enviar.php" method="post">
+            <ul class="ConteudoFormIdentificacao">
+                <li>
+                    <label for="name">Nome:</label>
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
                     <input id="inputIndentificacao" type="text" id="name" name="Nome" required><br><br>
                 <li>
                     <label for="email">Email:</label>
@@ -57,6 +75,7 @@
                 <div class="linha"></div>
             <ul class="ConteudoFormAgendamento">
                 <li>
+<<<<<<< HEAD
                     <label for="data">Data:</label><br>
                     <input type="date" id="DataSelect" name="Data" required class="mouseClickIMG">
                 </li>
@@ -64,6 +83,14 @@
                     <label for="Horario">Horario:</label><br>
                     <select id="HorarioSelect" name="Horario" required class="mouseClickIMG">
                         <option value="">Selecione...</option>
+=======
+                    <label for="date">Data:</label><br>
+                    <input type="date" id="Data" name="Data" required>
+                </li>
+                <li>
+                    <label for="Horario">Horario:</label><br>
+                    <select name="Horario" required>
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
                         <option value="9:00">9:00</option>
                         <option value="10:00">10:00</option>
                         <option value="11:00">11:00</option>
@@ -75,6 +102,7 @@
                         <option value="17:00">17:00</option>
                         <option value="18:00">18:00</option>
                         <option value="19:00">19:00</option>
+<<<<<<< HEAD
                     </select>
                 </li>
                 <li>
@@ -104,6 +132,17 @@
     </div>
     </div>
     <div id="DIV-CONFIRM"></div>
+=======
+                      </select>
+                </li>
+            </ul>
+        </ul>
+        <div id="botaodiv">
+            <input id="botaoenviar" type="submit" value="Enviar">
+        </div>
+        </form>
+    </div></div>
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
 </body>
 </html>
 <style>
@@ -119,6 +158,10 @@
         --footer-cor: #f3deeb;
         --bordas-cor: #ffbcdd;
         --brilho-cor: #b8606b;
+<<<<<<< HEAD
+=======
+        --form-background-cor: #b16e779a;
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
         --fundo-gradiente-cor-cima: #caa2bd8e;
         --fundo-gradiente-cor-baixo: #755669b4;
         --form-detalhes-cor: #75566960;
@@ -290,6 +333,7 @@
         transition: filter .2s ease-in;
         filter: drop-shadow(0px 0px 5px var(--bordas-cor));
     }
+<<<<<<< HEAD
     /*EspaçoEmBrancoIF*/
     @media( max-height: 700px){
         #EspaçoEmBrancoIF{
@@ -306,6 +350,8 @@
             padding-bottom: 310px
         }
     }
+=======
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
     @media (max-width: 800px) {
         .MenuGrande *{
             display: none;
@@ -468,9 +514,12 @@
         padding: 0;
         margin: 0;
     }
+<<<<<<< HEAD
     .mouseClickIMG{
         cursor: pointer;
     }
+=======
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
 </style>
 <script>
     document.getElementById('Serviços').addEventListener('click', function() {
@@ -501,6 +550,7 @@
         document.getElementById('menuHamburguerbarras').classList.toggle('active');
         document.getElementById('showMENUid').classList.toggle('show');
     });
+<<<<<<< HEAD
 
     
 
@@ -682,4 +732,7 @@
 
 
 
+=======
+    document.getElementById('dateForm')
+>>>>>>> 5bc46857d0d707d5b530dec3569a20172ccd5dff
 </script>
