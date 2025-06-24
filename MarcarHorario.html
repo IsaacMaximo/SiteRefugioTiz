@@ -44,7 +44,7 @@
     <div class="MarcarHorarioForm">
         <h2 id="TituloFORM">Marcar Horario</h2>
         <ul class="ConteudoForm">
-            <form action="index.php" method="POST" data-netlify="true">
+            <form action="index.php" method="POST" id="formMarcar" data-netlify="true">
             <ul class="ConteudoFormIdentificacao">
                 <li>
                     <label for="nome">Nome:</label>
@@ -734,6 +734,33 @@
     window.onload = VerificarData;
 });
 
+</script>
+<script>
+document.getElementById("formMarcar").addEventListener("submit", async function (e) {
+  e.preventDefault();
 
+  const form = e.target;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
 
+  const res = await fetch('/.netlify/functions/marcarHorario', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+
+  const respostaTexto = await res.text();
+  try {
+    const json = JSON.parse(respostaTexto);
+    if (res.status === 200) {
+      alert("✅ Marcação feita com sucesso!");
+      form.reset();
+    } else {
+      alert("❌ Erro: " + (json.error || "Desconhecido"));
+    }
+  } catch (e) {
+    console.error('Resposta inválida:', respostaTexto);
+    alert("❌ Resposta inválida do servidor.");
+  }
+});
 </script>
