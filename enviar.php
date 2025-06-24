@@ -1,49 +1,28 @@
 <?php
-include ("vendor/autoload.php");
-include ("include/configbasica.php");
+$nome = $_POST['Nome'] ?? 'Não informado';
+$email = $_POST['Email'] ?? 'Não informado';
+$data = $_POST['Data'] ?? 'Não informado';
+$hora = $_POST['Horario'] ?? 'Não informado';
+$servico = $_POST['Serviço'] ?? 'Não informado';
+$tipo = $_POST['Tipodeserviço'] ?? 'Não informado';
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+$para = "isaac3p4@gmail.com"; // Trocar pelo e-mail real que vai receber
+$assunto = "Nova marcação de horário";
 
-$mail = new PHPMailer(true);
+$mensagem = "📝 Nova marcação recebida:\n\n";
+$mensagem .= "Nome: $nome\n";
+$mensagem .= "E-mail: $email\n";
+$mensagem .= "Data: $data\n";
+$mensagem .= "Hora: $hora\n";
+$mensagem .= "Serviço: $servico\n";
+$mensagem .= "Tipo de Serviço: $tipo\n";
 
-    $nome = htmlspecialchars($_POST['Nome']);
-    $email = htmlspecialchars($_POST['Email']);
-    $data = htmlspecialchars($_POST['Data']);
-    $horario = htmlspecialchars($_POST['Horario']);
-try {
-    //Server settings
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = SMTP_HOST;
-    $mail->SMTPAuth   = true;
-    $mail->Username   = SMTP_USER;
-    $mail->Password   = SMTP_PASS;
-    $mail->Port       = SMTP_PORT;
+$headers = "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
 
-    //Recipients
-    $mail->setFrom('Isaac3p4@gmail.com', 'Isaac');
-    $mail->addAddress('Isaac3p4@gmail.com', 'Isaac');
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Marcacao Refugio Terapeutico da Tiz';
-    $mail->Body    = "Nome do cliente: $nome<br>Email do cliente: $email<br>Data de marcacao do cliente: $data<br>Horario marcado pelo cliente: $horario";
-
-    $mail->send();
-    echo 'E-mail enviado';
-} catch (Exception $e) {
-    echo "Erro: {$mail->ErrorInfo}";
+if (mail($para, $assunto, $mensagem, $headers)) {
+    echo "✅ Marcação enviada com sucesso!";
+} else {
+    echo "❌ Ocorreu um erro ao enviar sua marcação. Tente novamente.";
 }
-
-
-    
-    
-    $to = "isaac3p4@gmail.com";
-    $subject = "Nova marcação de Horário";
-    $body = "Nome do cliente: $nome\nEmail do cliente: $email\nData de marcação do cliente: $data\nHorário marcado pelo cliente: $horario\n";
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
-
 ?>

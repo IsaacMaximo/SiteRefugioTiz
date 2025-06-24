@@ -1,11 +1,12 @@
 <?php
-    $hostname = `localhost`;
-    $bancodedados = "basededadosreftiz";
-    $usuario = "root";
-    $senha = "";
+$servidor = "localhost";
+$usuario = "root";
+$senha = "";
+$banco = "nome_do_banco"; // troque pelo nome real do seu banco
 
-    $conexao = mysqli_connect($hostname, $usuario, $senha, $bancodedados);
-    if (!$conexao) {
-        die( "falha ao fazer ligação: " .mysqli_connect_error());
-    }
+$conexao = new mysqli($servidor, $usuario, $senha, $banco);
+
+if ($conexao->connect_error) {
+    die("Erro na conexão: " . $conexao->connect_error);
+}
 ?>
